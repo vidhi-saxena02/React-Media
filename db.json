@@ -2,31 +2,19 @@
   "users": [
     {
       "id": 1,
-      "name": "Myra"
+      "name": "Myra Thiel"
     },
     {
       "name": "Corey Reinger",
       "id": 2
     },
     {
-      "name": "Verna Russel",
+      "name": "Latoya Hoppe",
       "id": 3
     },
     {
-      "name": "Mrs. Rose Corwin",
+      "name": "Mr. Virginia Johns",
       "id": 4
-    },
-    {
-      "name": "Fred Erdman",
-      "id": 5
-    },
-    {
-      "name": "Thelma Williamson",
-      "id": 6
-    },
-    {
-      "name": "Mildred Emard II",
-      "id": 7
     }
   ],
   "ablums": [],

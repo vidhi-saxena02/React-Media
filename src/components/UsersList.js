@@ -4,6 +4,7 @@ import { fetchUsers, addUser } from "../store";
 import { useThunk } from "../hooks/use-thunk";
 import Button from "./Button";
 import Skeleton from "./Skeleton";
+import UsersListItem from "./UsersListItem";
 
 function UsersList() {
   const [dofetchUsers, isLoadingUser, loadingUserError] = useThunk(fetchUsers);
@@ -21,29 +22,20 @@ function UsersList() {
     doCreateUser();
   };
 
+  let content;
   if (isLoadingUser) {
-    return (
-      <div>
-        <Skeleton times={6} className="h-10 w-full" />
-      </div>
-    );
-  }
-  if (loadingUserError) {
-    return <div>Error fetching data...</div>;
+    content = <Skeleton times={6} className="h-10 w-full" />;
+  } else if (loadingUserError) {
+    content = <div>Error fetching data...</div>;
+  } else {
+    content = data.map((user) => {
+      return <UsersListItem key={user.id} user={user} />;
+    });
   }
 
-  const renderedUsers = data.map((user) => {
-    return (
-      <div key={user.id} className="mb-2 border rounded">
-        <div className="flex p-2 justify-between items-center cursor-pointer">
-          {user.name}
-        </div>
-      </div>
-    );
-  });
   return (
     <div>
-      <div className="flex flex-row justify-between m-3">
+      <div className="flex flex-row justify-between items-center m-3">
         <h1 className="m-2 text-xl">Users</h1>
 
         <Button loading={isCreatingUser} primary onClick={handleUserAdd}>
@@ -52,7 +44,7 @@ function UsersList() {
 
         {creatingUserError && "Error Creating User"}
       </div>
-      {renderedUsers}
+      {content}
     </div>
   );
 }
