@@ -17,6 +17,32 @@
       "id": 4
     }
   ],
-  "ablums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking trip",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Refined Soft Shirt",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Refined Bronze Shoes",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Practical Fresh Computer",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Licensed Soft Chicken",
+      "id": 14
+    }
+  ],
   "photos": []
 }
