@@ -18,4 +18,8 @@ setupListeners(store.dispatch);
 export * from "./thunks/fetchUsers";
 export * from "./thunks/addUsers";
 export * from "./thunks/removeUsers";
-export { useFetchAlbumsQuery, useAddAlbumMutation } from "./apis/albumsApi";
+export {
+  useFetchAlbumsQuery,
+  useAddAlbumMutation,
+  useRemoveAlbumMutation,
+} from "./apis/albumsApi";
